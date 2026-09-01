@@ -1,0 +1,48 @@
+@if (showForm()) {
+	<div class="landing-page">
+		<header class="landing-page__hero">
+			<h1>{{ translateService.translate('Приєднатися до Pets')() }}</h1>
+		</header>
+
+		<app-lead-form kind="specialist" [submitLabel]="translateService.translate('Надіслати заявку')()" />
+	</div>
+} @else {
+	<div class="landing-page">
+		<header class="landing-page__hero">
+			<h1>{{ translateService.translate('Знаходьте клієнтів для своїх послуг')() }}</h1>
+			<p>{{ translateService.translate('Pets з’єднує ветеринарів, грумерів, дресирувальників, вигульників і заводчиків з власниками тварин, які шукають надійного спеціаліста.')() }}</p>
+			<button pButton type="button" (click)="showForm.set(true)">{{ translateService.translate('Приєднатися')() }}</button>
+		</header>
+
+		<section class="landing-page__section">
+			<h2>{{ translateService.translate('Як це працює')() }}</h2>
+			<ul class="landing-page__list">
+				<li>{{ translateService.translate('Опублікуйте послуги: ветеринарія, грумінг, дресура, вигул, розведення тощо.')() }}</li>
+				<li>{{ translateService.translate('Керуйте розкладом і отримуйте записи від власників напряму.')() }}</li>
+				<li>{{ translateService.translate('Переглядайте історію здоров’я тварини перед візитом, за згодою власника.')() }}</li>
+				<li>{{ translateService.translate('Отримуйте відгуки та будуйте репутацію на платформі.')() }}</li>
+			</ul>
+		</section>
+
+		<section class="landing-page__section">
+			<h2>{{ translateService.translate('Чому Pets')() }}</h2>
+			<p>{{ translateService.translate('Замість пошуку клієнтів через сарафанне радіо — постійний потік записів, зручний розклад і повна історія тварини під рукою.')() }}</p>
+		</section>
+
+		<section class="landing-page__section">
+			<h2>{{ translateService.translate('Питання')() }}</h2>
+			<p-accordion [multiple]="true">
+				@for (item of faq; track item.question) {
+					<p-accordionpanel [value]="item.question">
+						<p-accordionheader>{{ translateService.translate(item.question)() }}</p-accordionheader>
+						<p-accordioncontent>{{ translateService.translate(item.answer)() }}</p-accordioncontent>
+					</p-accordionpanel>
+				}
+			</p-accordion>
+		</section>
+
+		<footer class="landing-page__cta">
+			<button pButton type="button" (click)="showForm.set(true)">{{ translateService.translate('Приєднатися')() }}</button>
+		</footer>
+	</div>
+}
