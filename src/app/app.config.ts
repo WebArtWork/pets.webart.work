@@ -20,7 +20,27 @@ import { provideNgxSocket } from '@wawjs/ngx-socket';
 import { provideNgxTinymce } from '@wawjs/ngx-tinymce';
 import { provideTranslate } from '@wawjs/ngx-translate';
 import { provideNgxPrime } from '@wawjs/ngx-prime/config';
+import { definePreset } from '@wawjs/css-prime-styled';
 import Aura from '@wawjs/css-prime-themes/aura';
+
+/** Pets brand coral, matched to the logo's paw-print color. */
+const PetsPreset = definePreset(Aura, {
+	semantic: {
+		primary: {
+			50: '#fff1f1',
+			100: '#ffdcdc',
+			200: '#feb9b9',
+			300: '#fd9595',
+			400: '#fb7373',
+			500: '#f65656',
+			600: '#d93f3f',
+			700: '#b13232',
+			800: '#8c2828',
+			900: '#6d1f1f',
+			950: '#421313',
+		},
+	},
+});
 import { NgxBosConfig, ngxBosProvide } from '@wawjs/ngx-bos';
 import { io } from 'socket.io-client';
 import { environment } from '@env';
@@ -73,7 +93,7 @@ export const appConfig: ApplicationConfig = {
 		}),
 		provideNgxPrime({
 			theme: {
-				preset: Aura,
+				preset: PetsPreset,
 				options: { darkModeSelector: "[data-mode='dark']" },
 			},
 		}),
