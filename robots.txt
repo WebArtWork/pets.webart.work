@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /$
+Allow: /share$
+Allow: /for-owners$
+Allow: /for-specialists$
+Allow: /for-shelters$
+Allow: /for-businesses$
+Allow: /sign$
+Disallow: /profile
+Disallow: /settings
+Disallow: /admin
+
+Sitemap: https://pets.webart.work/sitemap.xml

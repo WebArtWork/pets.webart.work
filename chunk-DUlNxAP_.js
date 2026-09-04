@@ -1,0 +1,1 @@
+var t=[{path:``,loadComponent:()=>import(`./chunk-z7fG25l2.js`).then(o=>o.ForSheltersPageComponent)}];export{t as routes};
