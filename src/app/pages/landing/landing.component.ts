@@ -8,4 +8,11 @@ import { TranslateDirective } from '@wawjs/ngx-translate';
 	templateUrl: './landing.component.html',
 	imports: [RouterLink, SpiderComponent, ButtonModule, TranslateDirective],
 })
-export class LandingComponent {}
+export class LandingComponent {
+	readonly roleLinks: { path: string; label: string }[] = [
+		{ path: '/for-owners', label: 'Власник тварини' },
+		{ path: '/for-specialists', label: 'Спеціаліст' },
+		{ path: '/for-shelters', label: 'Притулок' },
+		{ path: '/for-businesses', label: 'Бізнес' },
+	];
+}
