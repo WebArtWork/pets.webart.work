@@ -134,6 +134,62 @@ export const routes: Routes = [
 						(m) => m.routes,
 					),
 			},
+			{
+				path: 'specialists',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Спеціалісти',
+						description:
+							'Перегляньте ветеринарів, грумерів та дресирувальників, представлених у Pets.',
+					},
+				},
+				loadChildren: () =>
+					import('./pages/specialists/specialists.routes').then(
+						(m) => m.routes,
+					),
+			},
+			{
+				path: 'shelters',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Притулки',
+						description:
+							'Перегляньте притулки та тварин, які шукають дім, у Pets.',
+					},
+				},
+				loadChildren: () =>
+					import('./pages/shelters/shelters.routes').then(
+						(m) => m.routes,
+					),
+			},
+			{
+				path: 'pets',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Тварини',
+						description:
+							'Перегляньте профілі тварин з історією здоров’я в Pets.',
+					},
+				},
+				loadChildren: () =>
+					import('./pages/pets/pets.routes').then((m) => m.routes),
+			},
+			{
+				path: 'feed',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Стрічка',
+						description:
+							'Перегортайте стрічку оновлень про прийоми, усиновлення та спільноту Pets.',
+					},
+				},
+				loadChildren: () =>
+					import('./pages/feed/feed.routes').then((m) => m.routes),
+			},
 		],
 	},
 	{
