@@ -1,0 +1,1 @@
+var t=[{path:``,loadComponent:()=>import(`./chunk-DwgWK2jG2.js`).then(o=>o.PetsPageComponent)}];export{t as routes};

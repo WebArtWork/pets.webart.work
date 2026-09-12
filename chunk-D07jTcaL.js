@@ -1,0 +1,1 @@
+var t=[{path:``,loadComponent:()=>import(`./chunk-TaIaN158.js`).then(o=>o.SheltersPageComponent)}];export{t as routes};

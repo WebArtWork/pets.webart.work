@@ -1,0 +1,1 @@
+var t=[{path:``,loadComponent:()=>import(`./chunk-n9E6xZQc.js`).then(o=>o.ForSpecialistsPageComponent)}];export{t as routes};
